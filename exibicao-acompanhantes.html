@@ -25,7 +25,7 @@
     </div>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script>
-        axios.get('https://api.github.com/repos/ghbtech-dev/joao/contents/dados-acompanhantes.json')
+        axios.get('https://api.github.com/repos/ghbtech-dev/joao/dados-acompanhantes.json')
         .then(response => {
             let dados = JSON.parse(atob(response.data.content));
             let tbody = document.getElementById('tbodyAcompanhantes');
