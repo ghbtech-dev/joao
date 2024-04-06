@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Exibição de Acompanhantes</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Exibição de Acompanhantes</h1>
+    <div class="table-container">
+        <table id="tabelaAcompanhantes">
+            <thead>
+                <tr>
+                    <th>Data e Hora</th>
+                    <th>Nome do Acompanhante</th>
+                    <th>Dia do Mês</th>
+                    <th>Turno</th>
+                </tr>
+            </thead>
+            <tbody id="tbodyAcompanhantes">
+                <!-- Os dados serão inseridos dinamicamente aqui -->
+            </tbody>
+        </table>
+    </div>
+    <script>
+        let dados = JSON.parse(localStorage.getItem('acompanhantes'));
+        let tbody = document.getElementById('tbodyAcompanhantes');
+
+        if (dados) {
+            dados.forEach(dado => {
+                let tr = document.createElement('tr');
+                tr.innerHTML = `<td>${dado.dataHora}</td>
+                                <td>${dado.acompanhante}</td>
+                                <td>${dado.diaMes}</td>
+                                <td>${dado.turno}</td>`;
+                tbody.appendChild(tr);
+            });
+        }
+    </script>
+</body>
+</html>
