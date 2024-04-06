@@ -8,7 +8,7 @@ document.getElementById('formEscolha').addEventListener('submit', function(e) {
     let dataHora = new Date().toLocaleString();
     let registro = `${dataHora}: Acompanhante ${acompanhante}, Dia ${diaMes}, Turno ${turno}`;
 
-    // Lógica para salvar o registro em um arquivo de log (pode ser feito no servidor ou no local storage do navegador)
+    // Lógica para salvar o registro em um arquivo de log (simulado no console)
     console.log(registro);
     alert('Escolha salva com sucesso!');
 
