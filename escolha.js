@@ -4,11 +4,10 @@ document.getElementById('formEscolha').addEventListener('submit', function(e) {
     let acompanhante = document.getElementById('selectAcompanhante').value;
     let diaMes = document.getElementById('inputDiaMes').value;
     let turno = document.getElementById('selectTurno').value;
+    let dataHora = new Date().toLocaleString();
+    let registro = `${dataHora}: Acompanhante ${acompanhante}, Dia ${diaMes}, Turno ${turno}`;
 
-    let data = new Date();
-    let registro = `${data.toLocaleString()}: Acompanhante ${acompanhante} escolhido para o dia ${diaMes} com turno ${turno}`;
-
-    // Adicionar lógica para salvar o registro em um arquivo de log (exemplo: enviar para servidor, salvar em local storage, etc.)
+    // Lógica para salvar o registro em um arquivo de log (pode ser feito no servidor ou no local storage do navegador)
     console.log(registro);
     alert('Escolha salva com sucesso!');
 });
