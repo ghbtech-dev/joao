@@ -1,9 +1,10 @@
 // Simulação de dados para exibição na tabela
-let dados = [
-    { acompanhante: 'George', diaSemana: 'Segunda-feira', diaMes: 5, mes: 'Abril', turno: 'Manhã' },
-    { acompanhante: 'Alysson', diaSemana: 'Terça-feira', diaMes: 6, mes: 'Abril', turno: 'Tarde' },
+let dados = resgistro
+    //[
+    //{ acompanhante: 'George', diaSemana: 'Segunda-feira', diaMes: 5, mes: 'Abril', turno: 'Manhã' },
+    //{ acompanhante: 'Alysson', diaSemana: 'Terça-feira', diaMes: 6, mes: 'Abril', turno: 'Tarde' },
     // Adicione mais dados conforme necessário
-];
+//];
 
 window.onload = function() {
     let tbody = document.getElementById('tbodyAcompanhantes');
