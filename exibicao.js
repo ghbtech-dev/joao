@@ -34,4 +34,13 @@ window.onload = function() {
     }
 
     // Função para editar um registro (simulação, substitua com sua lógica real)
-    window.editar = function(index)
+    window.editar = function(index) {
+        let novoAcompanhante = prompt('Digite o novo nome do acompanhante:');
+        if (novoAcompanhante) {
+            dados[index].acompanhante = novoAcompanhante; // Atualiza o nome do acompanhante
+            renderizarTabela(); // Atualiza a tabela
+        }
+    }
+
+    renderizarTabela(); // Exibe a tabela ao carregar a página
+};
