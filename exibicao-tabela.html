@@ -2,21 +2,26 @@
 <html lang="pt-br">
 <head>
 <meta charset="UTF-8">
-<link rel="stylesheet" href="style.css"> 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Exibição da Tabela de Acompanhantes</title>
+<title>Tabela de Acompanhantes</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-<h1>Tabela de Acompanhantes</h1>
-<table id="tabelaAcompanhantes">
-    <tr>
-        <th>Nome do Acompanhante</th>
-        <th>Dia da Semana</th>
-        <th>Dia do Mês</th>
-        <th>Mês</th>
-        <th>Turno</th>
-    </tr>
-    <!-- Adicione aqui as linhas da tabela com os acompanhantes -->
-</table>
+    <h1>Tabela de Acompanhantes</h1>
+    <table id="tabelaAcompanhantes">
+        <thead>
+            <tr>
+                <th>Nome do Acompanhante</th>
+                <th>Dia da Semana</th>
+                <th>Dia do Mês</th>
+                <th>Mês</th>
+                <th>Turno</th>
+            </tr>
+        </thead>
+        <tbody id="tbodyAcompanhantes">
+            <!-- Os dados serão inseridos dinamicamente aqui -->
+        </tbody>
+    </table>
+    <script src="exibicao.js"></script>
 </body>
 </html>
