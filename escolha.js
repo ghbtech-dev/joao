@@ -10,6 +10,7 @@ function salvarEscolha() {
     dados.push(registro);
     alert('Escolha salva com sucesso!');
     limparCampos();
+    exibirEscolhas();
 }
 
 function limparCampos() {
@@ -22,34 +23,12 @@ function exibirEscolhas() {
     let tbody = document.getElementById('tbodyAcompanhantes');
     tbody.innerHTML = ''; // Limpa a tabela antes de adicionar os novos dados
 
-    dados.forEach((dado, index) => {
+    dados.forEach(dado => {
         let tr = document.createElement('tr');
         tr.innerHTML = `<td>${dado.dataHora}</td>
                         <td>${dado.acompanhante}</td>
                         <td>${dado.diaMes}</td>
-                        <td>${dado.turno}</td>
-                        <td>
-                            <button onclick="editarEscolha(${index})">Editar</button>
-                            <button onclick="deletarEscolha(${index})">Deletar</button>
-                        </td>`;
+                        <td>${dado.turno}</td>`;
         tbody.appendChild(tr);
     });
 }
-
-function editarEscolha(index) {
-    let novoAcompanhante = prompt('Digite o novo nome do acompanhante:', dados[index].acompanhante);
-    if (novoAcompanhante) {
-        dados[index].acompanhante = novoAcompanhante;
-        exibirEscolhas();
-    }
-}
-
-function deletarEscolha(index) {
-    dados.splice(index, 1);
-    exibirEscolhas();
-}
-
-// Exibe as escolhas ao carregar a página
-window.onload = function() {
-    exibirEscolhas();
-};
