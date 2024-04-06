@@ -7,7 +7,7 @@ function salvarEscolha() {
     let registro = { dataHora, acompanhante, diaMes, turno };
 
     // Envia os dados para o GitHub usando Axios
-    axios.post('https://api.github.com/repos/ghbtech-dev/joao/dados-acompanhantes.json', {
+    axios.post('https://api.github.com/repos/ghbtech-dev/joao/contents/dados-acompanhantes.json', {
         message: 'Adicionando nova escolha de acompanhante',
         content: btoa(JSON.stringify(registro)),
         branch: 'main'
